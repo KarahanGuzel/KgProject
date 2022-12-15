@@ -12,3 +12,4 @@ In the project there are assumptions are the following:
 Informations:
     -There is an already created admin in database which is kaganylmz@admin.com and password is:123123.
     -There are already created employees in database. One of them is: batuhanyavuz@email.com and password is:121212
+    -Database backup file name is: "MvcDemoDb"
