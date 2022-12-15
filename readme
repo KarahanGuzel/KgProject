@@ -1,0 +1,14 @@
+This is a Asp.net core mvc project with Entity Framework Core which provides to store employees of a company(etc.).
+Includes two roles are -Admin and -Employee.
+Admin is able to: See, Edit, Update and Delete employee's information.
+Employee is able to: See own informations.
+In the project there are assumptions are the following:
+    -There is one admin
+    -Admin can not created from the project.
+    -Only way to create an admin use MSSQL Server.
+    -Admin Email structure is: .....@admin.com and Password:123123
+    -Employee Email structure is: .....@email.com and Password:121212 by default.
+    
+Informations:
+    -There is an already created admin in database which is kaganylmz@admin.com and password is:123123.
+    -There are already created employees in database. One of them is: batuhanyavuz@email.com and password is:121212
