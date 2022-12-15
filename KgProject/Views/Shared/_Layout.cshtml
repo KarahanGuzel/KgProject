@@ -1,0 +1,66 @@
+﻿@using Microsoft.AspNetCore.Http;
+@{
+    int? id = Context.Session.GetInt32("id");
+
+}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>@ViewData["Title"] - ProductProject</title>
+    <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="~/css/site.css" />
+</head>
+<body>
+    @if (id.HasValue)
+    {
+        <div class="header bg-dark">
+            <div class="logo">
+                <h5>Product APP </h5>
+            </div>
+            <ul class="nav justify-content-end">
+                @if (id!=1)
+                {
+                    
+                    <li class="btn btn-outline-light">
+                    <a class="nav-link" asp-area="" asp-controller="Employees" asp-action="EmpInfo">Employee Info</a>
+                    </li>
+                }
+                @if(id==1)
+                {
+                    <li class="btn btn-outline-light">
+                        <a class="nav-link " asp-area="" asp-controller="Employees" asp-action="Index">Employees</a>
+                    </li>
+                    <li class="btn btn-outline-light">
+                        <a class="nav-link " asp-area="" asp-controller="Employees" asp-action="Add">Add Employee</a>
+                    </li>
+
+                }
+                
+                
+                
+                @*<li class="btn btn-outline-light">
+            <a onclick="$('#ProductModal').modal('show')" data-toggle="modal" class="nav-link" asp-area="" asp-controller="Home" asp-action="CreateProduct">Create Product</a>
+            </li>*@
+            </ul>
+        </div>
+    }
+    <div class="container">
+        <main role="main" class="pb-3 pt-3">
+            @RenderBody()
+        </main>
+    </div>
+
+    <footer class="border-top footer text-muted">
+        <div class="navbar fixed-bottom bg-dark">
+            <p>Copyright &copy; -  All Rights Reserved</p>
+        </div>
+    </footer>
+    <script src="~/lib/jquery/dist/jquery.min.js"></script>
+    <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="~/js/site.js" asp-append-version="true"></script>
+    @await RenderSectionAsync("Scripts", required: false)
+</body>
+</html>
