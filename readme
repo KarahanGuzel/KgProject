@@ -2,7 +2,7 @@ This is a Asp.net core mvc project with Entity Framework Core which provides to 
 Includes two roles are -Admin and -Employee.
 Admin is able to: See, Edit, Update and Delete employee's information.
 Employee is able to: See own informations.
-In the project there are assumptions are the following:
+In this project there are assumptions which are the following:
     -There is one admin
     -Admin can not created from the project.
     -Only way to create an admin use MSSQL Server.
